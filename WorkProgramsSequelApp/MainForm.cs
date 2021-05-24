@@ -13,8 +13,6 @@ namespace WorkProgramsSequelApp
 {
     public partial class MainForm : Form
     {
-        string connectionString = @"Server=(localdb)\mssqllocaldb;Database=helloappdb;Trusted_Connection=True;";
-
         public MainForm()
         {
             InitializeComponent();
@@ -22,7 +20,7 @@ namespace WorkProgramsSequelApp
 
         private void buttonDB_Click(object sender, EventArgs e)
         {
-            var dbForm = new DataBaseForm(connectionString);
+            var dbForm = new DataBaseForm();
             dbForm.ShowDialog();
         }
     }

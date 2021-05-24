@@ -52,6 +52,7 @@
     <Compile Include="DataBaseForm.Designer.cs">
       <DependentUpon>DataBaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataBaseWorker.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

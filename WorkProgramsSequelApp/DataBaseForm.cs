@@ -15,10 +15,8 @@ namespace WorkProgramsSequelApp
     {
         DataSet ds1;
         DataSet ds2;
-        SqlDataAdapter adapterEmp;
-        SqlDataAdapter adapterSyl;
 
-        public DataBaseForm(string connectionString)
+        public DataBaseForm()
         {
             InitializeComponent();
             dataGridViewEmp.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -26,20 +24,14 @@ namespace WorkProgramsSequelApp
             dataGridViewSyl.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewSyl.AllowUserToAddRows = false;
 
-            using(SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                adapterEmp = new SqlDataAdapter("SELECT * FROM Employees", connection);
-                adapterSyl = new SqlDataAdapter("SELECT * FROM Syllabuses", connection);
-                ds1 = new DataSet();
-                ds2 = new DataSet();
-                adapterEmp.Fill(ds1);
-                adapterSyl.Fill(ds2);
-                dataGridViewEmp.DataSource = ds1.Tables[0];
-                dataGridViewEmp.Columns["Id"].ReadOnly = true;
-                dataGridViewSyl.DataSource = ds2.Tables[0];
-                dataGridViewSyl.Columns["Id"].ReadOnly = true;
-            }
+            DataBaseWorker.OpenConnection();
+            ds1 = DataBaseWorker.ExecuteQuery("SELECT * FROM Employees");
+            ds2 = DataBaseWorker.ExecuteQuery("SELECT * FROM Syllabuses");
+            dataGridViewEmp.DataSource = ds1.Tables[0];
+            dataGridViewEmp.ReadOnly = true;
+            dataGridViewSyl.DataSource = ds2.Tables[0];
+            dataGridViewSyl.ReadOnly = true;
+            DataBaseWorker.CloseConnection();
         }
     }
 }
