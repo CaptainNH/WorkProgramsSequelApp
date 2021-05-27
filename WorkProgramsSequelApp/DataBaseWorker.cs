@@ -25,14 +25,14 @@ namespace WorkProgramsSequelApp
             connection.Open();
         }
 
-        public static DataSet ExecuteQuery(string query)
+        public static DataTable ExecuteQuery(string query)
         {
             SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
-            DataSet response = new DataSet();
+            DataTable response = new DataTable();
 
             adapter.Fill(response);
 
-            if (response.Tables.Count != 0)
+            if (response.Columns.Count != 0)
                 return response;
             else
                 return null;
