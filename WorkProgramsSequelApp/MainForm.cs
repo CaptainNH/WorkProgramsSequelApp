@@ -23,5 +23,11 @@ namespace WorkProgramsSequelApp
             var dbForm = new DataBaseForm();
             dbForm.ShowDialog();
         }
+
+        private void buttonSelectDoc_Click(object sender, EventArgs e)
+        {
+            var genForm = new GenerateForm();
+            genForm.ShowDialog();
+        }
     }
 }

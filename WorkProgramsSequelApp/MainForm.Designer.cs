@@ -39,8 +39,9 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Britannic Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(524, 99);
+            this.label1.Size = new System.Drawing.Size(699, 122);
             this.label1.TabIndex = 0;
             this.label1.Text = "MathFuck";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -49,9 +50,10 @@
             // 
             this.buttonDB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDB.Font = new System.Drawing.Font("Britannic Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDB.Location = new System.Drawing.Point(124, 238);
+            this.buttonDB.Location = new System.Drawing.Point(165, 293);
+            this.buttonDB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonDB.Name = "buttonDB";
-            this.buttonDB.Size = new System.Drawing.Size(276, 60);
+            this.buttonDB.Size = new System.Drawing.Size(368, 74);
             this.buttonDB.TabIndex = 1;
             this.buttonDB.Text = "База данных";
             this.buttonDB.UseVisualStyleBackColor = true;
@@ -60,21 +62,24 @@
             // buttonSelectDoc
             // 
             this.buttonSelectDoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSelectDoc.Location = new System.Drawing.Point(124, 357);
+            this.buttonSelectDoc.Location = new System.Drawing.Point(165, 439);
+            this.buttonSelectDoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSelectDoc.Name = "buttonSelectDoc";
-            this.buttonSelectDoc.Size = new System.Drawing.Size(276, 60);
+            this.buttonSelectDoc.Size = new System.Drawing.Size(368, 74);
             this.buttonSelectDoc.TabIndex = 2;
             this.buttonSelectDoc.Text = "Генерировать документ";
             this.buttonSelectDoc.UseVisualStyleBackColor = true;
+            this.buttonSelectDoc.Click += new System.EventHandler(this.buttonSelectDoc_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 534);
+            this.ClientSize = new System.Drawing.Size(699, 657);
             this.Controls.Add(this.buttonSelectDoc);
             this.Controls.Add(this.buttonDB);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "Документы матфака";
             this.ResumeLayout(false);

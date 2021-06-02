@@ -53,6 +53,12 @@
       <DependentUpon>DataBaseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBaseWorker.cs" />
+    <Compile Include="GenerateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerateForm.Designer.cs">
+      <DependentUpon>GenerateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DataBaseForm.resx">
       <DependentUpon>DataBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerateForm.resx">
+      <DependentUpon>GenerateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

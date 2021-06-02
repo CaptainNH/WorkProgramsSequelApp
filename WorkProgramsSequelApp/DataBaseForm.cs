@@ -48,7 +48,7 @@ namespace WorkProgramsSequelApp
 
         private void buttonSaveDB_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
