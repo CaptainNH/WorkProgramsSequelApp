@@ -1,0 +1,31 @@
+{
+'EducTechn':[{
+	'Theme':"Язык PHP",
+	'ActivityType':"Практическое",
+	'NumberOfHours':"5",
+	'ActiveForms':"Интерактивная лекция",
+	'InteractiveForms':"Разработка проекта «Социальная сеть»"
+	},
+	{
+	'Theme':"СУБД MySQL",
+	'ActivityType':"Практическое",
+	'NumberOfHours':"7",
+	'ActiveForms':"Традиционные лекции и практические (семинарские) занятия ",
+	'InteractiveForms':"Разработка проекта «Социальная сеть»"
+	},
+	{
+	'Theme':"Проектирование БД",
+	'ActivityType':"Практическое",
+	'NumberOfHours':"5",
+	'ActiveForms':"Разработка проекта ",
+	'InteractiveForms':"Разработка проекта «Разработка проекта «Форум»"
+	},
+	{
+	'Theme':"CMS",
+	'ActivityType':"Практическое",
+	'NumberOfHours':"7",
+	'ActiveForms':"Творческое задание",
+	'InteractiveForms':"Разработка проекта «CMS»»"
+	}
+	]
+}

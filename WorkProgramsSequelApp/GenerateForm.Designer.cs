@@ -163,6 +163,7 @@ namespace WorkProgramsSequelApp
             this.buttonGenerate.TabIndex = 12;
             this.buttonGenerate.Text = "Генерировать";
             this.buttonGenerate.UseVisualStyleBackColor = true;
+            this.buttonGenerate.Click += new System.EventHandler(this.buttonGenerate_Click);
             // 
             // GenerateForm
             // 
