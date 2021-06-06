@@ -29,6 +29,7 @@ namespace WorkProgramsSequelApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GenerateForm));
             this.comboBoxDoc = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -173,6 +174,7 @@ namespace WorkProgramsSequelApp
             // 
             // buttonGenerate
             // 
+            this.buttonGenerate.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonGenerate.Location = new System.Drawing.Point(239, 306);
             this.buttonGenerate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonGenerate.Name = "buttonGenerate";
@@ -193,6 +195,9 @@ namespace WorkProgramsSequelApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(350, 347);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.buttonGenerate);
@@ -207,9 +212,12 @@ namespace WorkProgramsSequelApp
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxDoc);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
             this.Name = "GenerateForm";
-            this.Text = "GenerateForm";
+            this.Text = "Рабочие программы добавление";
             this.ResumeLayout(false);
             this.PerformLayout();
 

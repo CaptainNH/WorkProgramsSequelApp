@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataBaseForm));
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonSaveDB = new System.Windows.Forms.Button();
             this.buttonChangeDB = new System.Windows.Forms.Button();
@@ -59,6 +60,7 @@
             // 
             // buttonSaveDB
             // 
+            this.buttonSaveDB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSaveDB.Enabled = false;
             this.buttonSaveDB.Location = new System.Drawing.Point(689, 5);
             this.buttonSaveDB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -71,6 +73,7 @@
             // 
             // buttonChangeDB
             // 
+            this.buttonChangeDB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonChangeDB.Location = new System.Drawing.Point(585, 5);
             this.buttonChangeDB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonChangeDB.Name = "buttonChangeDB";
@@ -152,8 +155,9 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DataBaseForm";
-            this.Text = "DataBaseForm";
+            this.Text = "Рабочие программы база даных";
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);

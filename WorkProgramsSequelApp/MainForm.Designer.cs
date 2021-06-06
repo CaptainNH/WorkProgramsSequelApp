@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.label1 = new System.Windows.Forms.Label();
             this.buttonDB = new System.Windows.Forms.Button();
             this.buttonSelectDoc = new System.Windows.Forms.Button();
@@ -81,8 +82,11 @@
             this.Controls.Add(this.buttonSelectDoc);
             this.Controls.Add(this.buttonDB);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "MainForm";
-            this.Text = "Документы матфака";
+            this.Text = "Рабочие программы";
             this.ResumeLayout(false);
             this.PerformLayout();
 
