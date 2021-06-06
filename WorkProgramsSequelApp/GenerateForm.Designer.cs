@@ -56,7 +56,7 @@ namespace WorkProgramsSequelApp
             "Аннотации",
             "ОПОП (В разработке)"});
             this.comboBoxDoc.Location = new System.Drawing.Point(9, 71);
-            this.comboBoxDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxDoc.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxDoc.Name = "comboBoxDoc";
             this.comboBoxDoc.Size = new System.Drawing.Size(330, 21);
             this.comboBoxDoc.TabIndex = 0;
@@ -93,7 +93,7 @@ namespace WorkProgramsSequelApp
             "Магистратура (В разработке)",
             "Аспирантура (В разработке)"});
             this.comboBoxLevel.Location = new System.Drawing.Point(9, 120);
-            this.comboBoxLevel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxLevel.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxLevel.Name = "comboBoxLevel";
             this.comboBoxLevel.Size = new System.Drawing.Size(330, 21);
             this.comboBoxLevel.TabIndex = 3;
@@ -118,7 +118,7 @@ namespace WorkProgramsSequelApp
             "Информатика и вычислительная техника (В разработке)",
             "Педагогическое образование по профилю \"Математика, Информатика\" (В разработке)"});
             this.comboBoxDirection.Location = new System.Drawing.Point(9, 167);
-            this.comboBoxDirection.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxDirection.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxDirection.Name = "comboBoxDirection";
             this.comboBoxDirection.Size = new System.Drawing.Size(330, 21);
             this.comboBoxDirection.TabIndex = 5;
@@ -146,7 +146,7 @@ namespace WorkProgramsSequelApp
             // textBoxYear
             // 
             this.textBoxYear.Location = new System.Drawing.Point(9, 217);
-            this.textBoxYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxYear.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxYear.Name = "textBoxYear";
             this.textBoxYear.Size = new System.Drawing.Size(76, 20);
             this.textBoxYear.TabIndex = 9;
@@ -167,7 +167,7 @@ namespace WorkProgramsSequelApp
             this.comboBoxDiscipline.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxDiscipline.FormattingEnabled = true;
             this.comboBoxDiscipline.Location = new System.Drawing.Point(9, 266);
-            this.comboBoxDiscipline.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxDiscipline.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxDiscipline.Name = "comboBoxDiscipline";
             this.comboBoxDiscipline.Size = new System.Drawing.Size(330, 21);
             this.comboBoxDiscipline.TabIndex = 11;
@@ -176,13 +176,18 @@ namespace WorkProgramsSequelApp
             // 
             this.buttonGenerate.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonGenerate.Location = new System.Drawing.Point(239, 306);
-            this.buttonGenerate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonGenerate.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGenerate.Name = "buttonGenerate";
             this.buttonGenerate.Size = new System.Drawing.Size(100, 30);
             this.buttonGenerate.TabIndex = 12;
+            this.buttonGenerate.Tag = ".docx";
             this.buttonGenerate.Text = "Генерировать";
             this.buttonGenerate.UseVisualStyleBackColor = true;
             this.buttonGenerate.Click += new System.EventHandler(this.buttonGenerate_Click);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.Filter = "|*.docx";
             // 
             // progressBar1
             // 
@@ -190,6 +195,7 @@ namespace WorkProgramsSequelApp
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(225, 29);
             this.progressBar1.TabIndex = 13;
+            this.progressBar1.Value = 37;
             // 
             // GenerateForm
             // 
@@ -214,10 +220,10 @@ namespace WorkProgramsSequelApp
             this.Controls.Add(this.comboBoxDoc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "GenerateForm";
-            this.Text = "Рабочие программы добавление";
+            this.Text = "Рабочие программы";
             this.ResumeLayout(false);
             this.PerformLayout();
 
