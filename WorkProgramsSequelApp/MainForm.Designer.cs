@@ -47,6 +47,8 @@
             // 
             // buttonDB
             // 
+            this.buttonDB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonDB.AutoSize = true;
             this.buttonDB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDB.Location = new System.Drawing.Point(90, 139);
@@ -59,9 +61,11 @@
             // 
             // buttonSelectDoc
             // 
+            this.buttonSelectDoc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonSelectDoc.AutoSize = true;
             this.buttonSelectDoc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSelectDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSelectDoc.Location = new System.Drawing.Point(90, 220);
+            this.buttonSelectDoc.Location = new System.Drawing.Point(90, 224);
             this.buttonSelectDoc.Name = "buttonSelectDoc";
             this.buttonSelectDoc.Size = new System.Drawing.Size(300, 60);
             this.buttonSelectDoc.TabIndex = 2;
@@ -80,6 +84,7 @@
             this.Name = "MainForm";
             this.Text = "Документы матфака";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
