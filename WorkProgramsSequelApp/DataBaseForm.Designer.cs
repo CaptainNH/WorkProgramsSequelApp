@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonSaveDB = new System.Windows.Forms.Button();
             this.buttonChangeDB = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -36,7 +37,6 @@
             this.dataGridViewEmp = new System.Windows.Forms.DataGridView();
             this.tabSyllabuses = new System.Windows.Forms.TabPage();
             this.dataGridViewSyl = new System.Windows.Forms.DataGridView();
-            this.buttonSaveDB = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -48,20 +48,33 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panel2.Controls.Add(this.buttonSaveDB);
             this.panel2.Controls.Add(this.buttonChangeDB);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 440);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(0, 411);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1067, 114);
+            this.panel2.Size = new System.Drawing.Size(800, 39);
             this.panel2.TabIndex = 1;
+            // 
+            // buttonSaveDB
+            // 
+            this.buttonSaveDB.Enabled = false;
+            this.buttonSaveDB.Location = new System.Drawing.Point(689, 5);
+            this.buttonSaveDB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSaveDB.Name = "buttonSaveDB";
+            this.buttonSaveDB.Size = new System.Drawing.Size(100, 30);
+            this.buttonSaveDB.TabIndex = 1;
+            this.buttonSaveDB.Text = "Сохранить";
+            this.buttonSaveDB.UseVisualStyleBackColor = true;
+            this.buttonSaveDB.Click += new System.EventHandler(this.buttonSaveDB_Click);
             // 
             // buttonChangeDB
             // 
-            this.buttonChangeDB.Location = new System.Drawing.Point(47, 26);
+            this.buttonChangeDB.Location = new System.Drawing.Point(585, 5);
+            this.buttonChangeDB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonChangeDB.Name = "buttonChangeDB";
-            this.buttonChangeDB.Size = new System.Drawing.Size(181, 56);
+            this.buttonChangeDB.Size = new System.Drawing.Size(100, 30);
             this.buttonChangeDB.TabIndex = 0;
             this.buttonChangeDB.Text = "Редактировать";
             this.buttonChangeDB.UseVisualStyleBackColor = true;
@@ -73,9 +86,8 @@
             this.panel1.Controls.Add(this.tabControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1067, 440);
+            this.panel1.Size = new System.Drawing.Size(800, 411);
             this.panel1.TabIndex = 2;
             // 
             // tabControl1
@@ -84,20 +96,18 @@
             this.tabControl1.Controls.Add(this.tabSyllabuses);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1067, 440);
+            this.tabControl1.Size = new System.Drawing.Size(800, 411);
             this.tabControl1.TabIndex = 0;
             // 
             // tabEmployees
             // 
             this.tabEmployees.Controls.Add(this.dataGridViewEmp);
-            this.tabEmployees.Location = new System.Drawing.Point(4, 25);
-            this.tabEmployees.Margin = new System.Windows.Forms.Padding(4);
+            this.tabEmployees.Location = new System.Drawing.Point(4, 22);
             this.tabEmployees.Name = "tabEmployees";
-            this.tabEmployees.Padding = new System.Windows.Forms.Padding(4);
-            this.tabEmployees.Size = new System.Drawing.Size(1059, 411);
+            this.tabEmployees.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabEmployees.Size = new System.Drawing.Size(792, 385);
             this.tabEmployees.TabIndex = 0;
             this.tabEmployees.Text = "Сотрудники";
             this.tabEmployees.UseVisualStyleBackColor = true;
@@ -107,21 +117,19 @@
             this.dataGridViewEmp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewEmp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewEmp.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewEmp.Location = new System.Drawing.Point(4, 4);
-            this.dataGridViewEmp.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewEmp.Location = new System.Drawing.Point(3, 3);
             this.dataGridViewEmp.Name = "dataGridViewEmp";
             this.dataGridViewEmp.RowHeadersWidth = 51;
-            this.dataGridViewEmp.Size = new System.Drawing.Size(1051, 403);
+            this.dataGridViewEmp.Size = new System.Drawing.Size(786, 379);
             this.dataGridViewEmp.TabIndex = 0;
             // 
             // tabSyllabuses
             // 
             this.tabSyllabuses.Controls.Add(this.dataGridViewSyl);
-            this.tabSyllabuses.Location = new System.Drawing.Point(4, 25);
-            this.tabSyllabuses.Margin = new System.Windows.Forms.Padding(4);
+            this.tabSyllabuses.Location = new System.Drawing.Point(4, 22);
             this.tabSyllabuses.Name = "tabSyllabuses";
-            this.tabSyllabuses.Padding = new System.Windows.Forms.Padding(4);
-            this.tabSyllabuses.Size = new System.Drawing.Size(1059, 411);
+            this.tabSyllabuses.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabSyllabuses.Size = new System.Drawing.Size(792, 385);
             this.tabSyllabuses.TabIndex = 1;
             this.tabSyllabuses.Text = "Учебные планы";
             this.tabSyllabuses.UseVisualStyleBackColor = true;
@@ -131,32 +139,19 @@
             this.dataGridViewSyl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewSyl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSyl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewSyl.Location = new System.Drawing.Point(4, 4);
-            this.dataGridViewSyl.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewSyl.Location = new System.Drawing.Point(3, 3);
             this.dataGridViewSyl.Name = "dataGridViewSyl";
             this.dataGridViewSyl.RowHeadersWidth = 51;
-            this.dataGridViewSyl.Size = new System.Drawing.Size(1051, 403);
+            this.dataGridViewSyl.Size = new System.Drawing.Size(786, 379);
             this.dataGridViewSyl.TabIndex = 0;
-            // 
-            // buttonSaveDB
-            // 
-            this.buttonSaveDB.Location = new System.Drawing.Point(785, 26);
-            this.buttonSaveDB.Name = "buttonSaveDB";
-            this.buttonSaveDB.Size = new System.Drawing.Size(214, 56);
-            this.buttonSaveDB.TabIndex = 1;
-            this.buttonSaveDB.Text = "Сохранить";
-            this.buttonSaveDB.UseVisualStyleBackColor = true;
-            this.buttonSaveDB.Visible = false;
-            this.buttonSaveDB.Click += new System.EventHandler(this.buttonSaveDB_Click);
             // 
             // DataBaseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DataBaseForm";
             this.Text = "DataBaseForm";
             this.panel2.ResumeLayout(false);

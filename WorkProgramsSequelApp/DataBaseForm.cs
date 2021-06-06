@@ -43,12 +43,12 @@ namespace WorkProgramsSequelApp
         {
             dataGridViewEmp.ReadOnly = false;
             dataGridViewSyl.ReadOnly = false;
-            buttonSaveDB.Visible = true;
+            buttonSaveDB.Enabled = true;
         }
 
         private void buttonSaveDB_Click(object sender, EventArgs e)
         {
-
+            buttonSaveDB.Enabled = false;
         }
     }
 }
