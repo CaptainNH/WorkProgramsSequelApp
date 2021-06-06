@@ -15,7 +15,7 @@ namespace WorkProgramsSequelApp
         public GenerateForm()
         {
             InitializeComponent();
-            SetSubjects();
+            SetSubjects();            
         }
 
         private void SetSubjects()
@@ -34,7 +34,26 @@ namespace WorkProgramsSequelApp
                 MessageBox.Show("Заполните все поля!");
             else
             {
+                var wp = new WorkProgram(comboBoxDiscipline.Text, comboBoxLevel.Text, comboBoxDirection.Text, int.Parse(textBoxYear.Text));
+                try
+                {
+                    DialogResult res = saveFileDialog1.ShowDialog();
+                    if (res == DialogResult.OK)
+                    {
+                        var path = saveFileDialog1.FileName;
+                        _Word.path = path;
+                        buttonGenerate.Enabled = false;
+                        _Word.GenerateSubject(wp);
+                        buttonGenerate.Enabled = true;
+                    }
+                    else
+                        throw new Exception("Путь не выбран");
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

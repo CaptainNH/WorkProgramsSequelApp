@@ -18,6 +18,9 @@ namespace WorkProgramsSequelApp
 
         static string DBName = "helloappdb";
 
+        /// <summary>
+        /// Подключение к базе данных.
+        /// </summary>
         public static void OpenConnection()
         {
             connectString = $"Server={SQLServer};Database={DBName};Trusted_Connection = True;";
@@ -25,6 +28,9 @@ namespace WorkProgramsSequelApp
             connection.Open();
         }
 
+        /// <summary>
+        /// Выполнение запроса и возвращение ответа.
+        /// </summary>
         public static DataTable ExecuteQuery(string query)
         {
             SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
@@ -38,6 +44,9 @@ namespace WorkProgramsSequelApp
                 return null;
         }
 
+        /// <summary>
+        /// Выполнение запроса без ответа.
+        /// </summary>
         public static void ExecuteQueryWithoutResponse(string query)
         {
             SqlCommand command = new SqlCommand(query, connection);
@@ -45,6 +54,9 @@ namespace WorkProgramsSequelApp
             command.ExecuteNonQuery();
         }
 
+        /// <summary>
+        /// Закрытие соединения с БД.
+        /// </summary>
         public static void CloseConnection()
         {
             connection.Close();

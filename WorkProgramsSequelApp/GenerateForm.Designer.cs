@@ -41,6 +41,7 @@ namespace WorkProgramsSequelApp
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxDiscipline = new System.Windows.Forms.ComboBox();
             this.buttonGenerate = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // comboBoxDoc
@@ -48,10 +49,10 @@ namespace WorkProgramsSequelApp
             this.comboBoxDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDoc.FormattingEnabled = true;
             this.comboBoxDoc.Items.AddRange(new object[] {
-            "Справка КО",
+            "Справка КО (В разработке)",
             "Рабочие программы",
             "Аннотации",
-            "ОПОП"});
+            "ОПОП (В разработке)"});
             this.comboBoxDoc.Location = new System.Drawing.Point(12, 87);
             this.comboBoxDoc.Name = "comboBoxDoc";
             this.comboBoxDoc.Size = new System.Drawing.Size(421, 24);
@@ -81,8 +82,8 @@ namespace WorkProgramsSequelApp
             this.comboBoxLevel.FormattingEnabled = true;
             this.comboBoxLevel.Items.AddRange(new object[] {
             "Бакалавриат/Специалитет",
-            "Магистратура",
-            "Аспирантура"});
+            "Магистратура (В разработке)",
+            "Аспирантура (В разработке)"});
             this.comboBoxLevel.Location = new System.Drawing.Point(12, 148);
             this.comboBoxLevel.Name = "comboBoxLevel";
             this.comboBoxLevel.Size = new System.Drawing.Size(421, 24);
@@ -102,10 +103,10 @@ namespace WorkProgramsSequelApp
             this.comboBoxDirection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDirection.FormattingEnabled = true;
             this.comboBoxDirection.Items.AddRange(new object[] {
-            "Прикладная математика и информатика",
-            "Математика (Кибербезопасность)",
-            "Информатика и вычислительная техника",
-            "Педагогическое образование по профилю \"Математика, Информатика\""});
+            "01.03.02 Прикладная математика и информатика",
+            "Математика (Кибербезопасность) (В разработке)",
+            "Информатика и вычислительная техника (В разработке)",
+            "Педагогическое образование по профилю \"Математика, Информатика\" (В разработке)"});
             this.comboBoxDirection.Location = new System.Drawing.Point(12, 206);
             this.comboBoxDirection.Name = "comboBoxDirection";
             this.comboBoxDirection.Size = new System.Drawing.Size(421, 24);
@@ -203,5 +204,6 @@ namespace WorkProgramsSequelApp
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBoxDiscipline;
         private System.Windows.Forms.Button buttonGenerate;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
