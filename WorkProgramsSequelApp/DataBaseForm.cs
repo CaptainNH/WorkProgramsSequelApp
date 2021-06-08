@@ -13,23 +13,29 @@ namespace WorkProgramsSequelApp
 {
     public partial class DataBaseForm : Form
     {
-        DataSet ds;
+        DataSet ds = new DataSet();
 
         public DataBaseForm()
         {
             InitializeComponent();
-            dataGridViewEmp.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewEmp.AllowUserToAddRows = false;
-            dataGridViewSyl.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewSyl.AllowUserToAddRows = false;
-
-            DataBaseWorker.OpenConnection();
-            DataTable dsEmp = DataBaseWorker.ExecuteQuery("SELECT * FROM Employees");
-            DataTable dsSyl = DataBaseWorker.ExecuteQuery("SELECT * FROM Syllabuses");
-            dataGridViewEmp.DataSource = dsEmp;
             dataGridViewEmp.ReadOnly = true;
-            dataGridViewSyl.DataSource = dsSyl;
             dataGridViewSyl.ReadOnly = true;
+            dataGridViewDisc.ReadOnly = true;
+            dataGridViewWL.ReadOnly = true;
+            FillData();
+        }
+
+        private void FillData()
+        {
+            DataBaseWorker.OpenConnection();
+            ds.Tables.Add(DataBaseWorker.ExecuteQuery("SELECT * FROM Employees"));
+            ds.Tables.Add(DataBaseWorker.ExecuteQuery("SELECT * FROM Syllabuses"));
+            ds.Tables.Add(DataBaseWorker.ExecuteQuery("SELECT Id, Name, Competencies FROM Disciplines"));
+            ds.Tables.Add(DataBaseWorker.ExecuteQuery("SELECT * FROM Workload"));
+            dataGridViewEmp.DataSource = ds.Tables[0];
+            dataGridViewSyl.DataSource = ds.Tables[1];
+            dataGridViewDisc.DataSource = ds.Tables[2];
+            dataGridViewWL.DataSource = ds.Tables[3];
             DataBaseWorker.CloseConnection();
         }
 

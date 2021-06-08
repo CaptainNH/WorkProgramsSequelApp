@@ -26,33 +26,41 @@ namespace WorkProgramsSequelApp
             this.StudyProgram = sp;
             this.Direction = dir;
             this.Year = year;
-            bookmarks = new Dictionary<string, string>();
-            FillDic();
+            bookmarks = FillDic();
         }
 
-        private void FillDic()
+        private Dictionary<string, string> FillDic()
         {
             DataBaseWorker.OpenConnection();
             SubjectId = (int)DataBaseWorker.ExecuteQuery($"SELECT Id FROM Disciplines WHERE Name = N'{SubjectName}'")
                 .Rows[0].ItemArray[0];
-            bookmarks["AuditoryLessons"] = GetFromDB("AuditoryLessons");
-            bookmarks["Competencies"] = GetFromDB("Competencies");
-            bookmarks["CourseWork"] = GetFromDB("CourseWork");
-            bookmarks["CreditUnits"] = GetFromDB("CreditUnits") + "зачётных единиц";
-            bookmarks["Director"] = GetFromDB("Director");
-            bookmarks["EdForm"] = GetFromDB("EdForm");
-            bookmarks["Hours"] = GetFromDB("Hours");
-            bookmarks["Hours2"] = GetFromDB("Hours");
-            bookmarks["IndependentWork"] = GetFromDB("IndependentWorkBySemester");
-            bookmarks["InteractiveWatch"] = GetFromDB("InteractiveWatch");
-            bookmarks["LaboratoryExercises"] = GetFromDB("LaboratoryExercises");
-            bookmarks["Lectures"] = GetFromDB("Lectures");
-            bookmarks["Position"] = GetFromDB("Position");
-            bookmarks["Profile"] = GetFromDB("Profile");
-            bookmarks["Protocol"] = GetFromDB("Protocol").Split('№')[0].Trim() + ", протокол" + GetFromDB("Protocol").Split('№')[1].Trim();
-            bookmarks["Standart"] = GetFromDB("Standart");
-            bookmarks["Workshops"] = GetFromDB("Workshops");
-            bookmarks["TypeOfLessons"] = GetFromDB("TypesOfLessons");
+            var dic = new Dictionary<string, string>()
+            {
+                ["Direction"] = Direction,
+                ["Direction2"] = Direction,
+                ["Direction3"] = Direction,
+                ["Discipline"] = SubjectName,
+                ["Discipline2"] = SubjectName,
+                ["AuditoryLessons"] = GetFromDB("AuditoryLessons"),
+                ["Competencies"] = GetFromDB("Competencies"),
+                ["CourseWork"] = GetFromDB("CourseWork"),
+                ["CreditUnits"] = GetFromDB("CreditUnits") + " зачётных единиц",
+                ["Director"] = GetFromDB("Director"),
+                ["EdForm"] = GetFromDB("EdForm"),
+                ["Hours"] = GetFromDB("Hours"),
+                ["Hours2"] = GetFromDB("Hours"),
+                ["IndependentWork"] = GetFromDB("IndependentWorkBySemester"),
+                ["InteractiveWatch"] = GetFromDB("InteractiveWatch"),
+                ["LaboratoryExercises"] = GetFromDB("LaboratoryExercises"),
+                ["Lectures"] = GetFromDB("Lectures"),
+                ["Position"] = GetFromDB("Position"),
+                ["Profile"] = GetFromDB("Profile"),
+                ["Protocol"] = GetFromDB("Protocol").Split('№')[0].Trim() + ", протокол № " + GetFromDB("Protocol").Split('№')[1].Trim(),
+                ["Standart"] = GetFromDB("Standart"),
+                ["Workshops"] = GetFromDB("Workshops"),
+                ["TypeOfLessons"] = GetFromDB("TypesOfLessons")
+            };
+            return dic;
         }
 
         private string GetFromDB(string s)

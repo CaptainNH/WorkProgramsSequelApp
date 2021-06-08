@@ -15,14 +15,10 @@ namespace WorkProgramsSequelApp
 
         public static void GenerateSubject(WorkProgram wp)
         {
-            template.Bookmarks["Direction"].SetText(wp.Direction);
-            template.Bookmarks["Direction2"].SetText(wp.Direction);
-            template.Bookmarks["Direction3"].SetText(wp.Direction);
-            template.Bookmarks["Discipline"].SetText(wp.SubjectName);
-            template.Bookmarks["Discipline2"].SetText(wp.SubjectName);
             foreach (var item in wp.bookmarks)
             {
-                template.Bookmarks[item.Key].SetText(item.Value);
+                if(!string.IsNullOrEmpty(item.Value))
+                    template.Bookmarks[item.Key].SetText(item.Value);
             }
             template.SaveAs(path);           
         }
