@@ -17,8 +17,25 @@ namespace WorkProgramsSequelApp
         {
             foreach (var item in wp.bookmarks)
             {
+                var format = new Xceed.Document.NET.Formatting();
+                switch (item.Key)
+                {
+                    case "Discipline": 
+                        format.Size = 14; 
+                        format.Bold = true; 
+                        break;
+                    case "Direction":
+                        format.Size = 14;
+                        break;
+                    case "Profile":
+                        format.Size = 14;
+                        break;
+                    default:
+                        format.Size = 12;
+                        break;
+                }
                 if(!string.IsNullOrEmpty(item.Value))
-                    template.Bookmarks[item.Key].SetText(item.Value);
+                    template.Bookmarks[item.Key].SetText(item.Value, format);
             }
             template.SaveAs(path);           
         }

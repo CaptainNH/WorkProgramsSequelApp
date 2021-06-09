@@ -58,10 +58,16 @@ namespace WorkProgramsSequelApp
                 ["Protocol"] = GetFromDB("Protocol").Split('№')[0].Trim() + ", протокол № " + GetFromDB("Protocol").Split('№')[1].Trim(),
                 ["Standart"] = GetFromDB("Standart"),
                 ["Workshops"] = GetFromDB("Workshops"),
-                ["TypeOfLessons"] = GetFromDB("TypesOfLessons")
+                ["TypeOfLessons"] = GetFromDB("TypesOfLessons"),
+                ["SumIndependentWork"] = GetFromDB("SumIndependentWork")
             };
             return dic;
         }
+
+        //private string GetSemesters()
+        //{
+
+        //}
 
         private string GetFromDB(string s)
         {
