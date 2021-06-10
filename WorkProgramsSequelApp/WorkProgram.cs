@@ -59,7 +59,8 @@ namespace WorkProgramsSequelApp
                 ["Standart"] = GetFromDB("Standart"),
                 ["Workshops"] = GetFromDB("Workshops"),
                 ["TypeOfLessons"] = GetFromDB("TypesOfLessons"),
-                ["SumIndependentWork"] = GetFromDB("SumIndependentWork")
+                ["SumIndependentWork"] = GetFromDB("SumIndependentWork"),
+                ["StudyProgram"] = GetFromDB("StudyProgram")
             };
             return dic;
         }
